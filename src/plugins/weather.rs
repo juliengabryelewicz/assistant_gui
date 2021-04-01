@@ -12,3 +12,14 @@ pub fn get_weather_from_search(location: &str, api_key: &str)  -> Result<JsonVal
 pub fn calculate_temperature(temperature: f32)  -> String {
     (temperature - 273.15).floor().to_string()
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_calculate_temperature() {
+        assert_eq!(calculate_temperature(280.0), "6".to_string())
+    }
+}

@@ -51,3 +51,18 @@ impl std::fmt::Display for Newspaper {
         )
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_get_news() {
+        assert!(!get_news(Newspaper::Lefigaro).is_err())
+    }
+
+    #[test]
+    fn test_get_news_from_newspaper() {
+        assert!(!get_news_from_newspaper("https://www.lefigaro.fr/rss/figaro_actualites.xml").is_err())
+    }
+}

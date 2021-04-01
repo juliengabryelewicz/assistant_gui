@@ -3,7 +3,7 @@ mod style;
 
 use chrono::prelude::*;
 use iced::{
-    button, pick_list, scrollable, Align, Application, Button, Column, 
+    button, pick_list, scrollable, Align, Application, Button, Clipboard, Column, 
     Command, Container, Element, HorizontalAlignment, PickList, Row, 
     Scrollable, Settings, Subscription, Text, text_input, 
     TextInput, time, VerticalAlignment};
@@ -75,7 +75,7 @@ impl Application for Assistant {
         String::from("Assistant personnel")
     }
 
-    fn update(&mut self, message: Message) -> Command<Message> {
+    fn update(&mut self, message: Message, _: &mut Clipboard) -> Command<Message> {
         match self {
             Assistant::Loading => {
                 match message {

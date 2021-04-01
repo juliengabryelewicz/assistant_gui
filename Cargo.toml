@@ -1,6 +1,6 @@
 [package]
 name = "assistant_gui"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["julien <julien.gabryelewicz2@gmail.com>"]
 edition = "2018"
 publish = false
@@ -11,7 +11,7 @@ publish = false
 async-std = "1.0"
 chrono = { version = "0.4", features = ["unstable-locales"] }
 directories-next = "2.0"
-iced = {version = "0.2", features = ["async-std","debug"] }
+iced = {version = "0.3", features = ["async-std","debug"] }
 json = "0.12.4"
 reqwest = { version = "0.11", features = ["blocking", "json"] }
 rss = "1.10.0"
